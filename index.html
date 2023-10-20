@@ -6,33 +6,26 @@
 </head>
 
 <body>
-    <label for="mynum">Masukkan angka:</labe
-l>
-    <input type="number" id="mynum" name="my
-num">
+    <label for="mynum">Masukkan angka:</label>
+    <input type="number" id="mynum" name="mynum">
 
     <button onclick="validateNumber()">Submit</button>
 
     <script>
         function validateNumber() {
-            var x = document.getElementById(
-"mynum").value;
+            var x = document.getElementById("mynum").value;
 
             try {
                 if (x == "") throw "empty";
-                if (isNaN(x)) throw "not a n
-umber";
+                if (isNaN(x)) throw "not a number";
                 x = Number(x);
-                if (x > 10) throw "too high"
-;
+                if (x > 10) throw "too high";
                 alert("Input is valid!");
             } catch (err) {
-                document.write("Input is " +
- err);
+                document.write("Input is " + err);
                 console.error(err);
             } finally {
-                document.write("<br />Done")
-;
+                document.write("<br />Done");
             }
         }
     </script>
