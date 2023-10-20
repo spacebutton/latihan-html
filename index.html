@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contoh HTML dengan mynum</title>
+</head>
+
+<body>
+    <label for="mynum">Masukkan angka:</labe
+l>
+    <input type="number" id="mynum" name="my
+num">
+
+    <button onclick="validateNumber()">Submit</button>
+
+    <script>
+        function validateNumber() {
+            var x = document.getElementById(
+"mynum").value;
+
+            try {
+                if (x == "") throw "empty";
+                if (isNaN(x)) throw "not a n
+umber";
+                x = Number(x);
+                if (x > 10) throw "too high"
+;
+                alert("Input is valid!");
+            } catch (err) {
+                document.write("Input is " +
+ err);
+                console.error(err);
+            } finally {
+                document.write("<br />Done")
+;
+            }
+        }
+    </script>
+</body>
+
+</html>
